@@ -1,0 +1,649 @@
+
+/* ================= GENERAL STYLING ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #102A56;
+    line-height: 1.6;
+}
+
+section {
+    padding: 90px 10%;
+}
+
+section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #102A56;
+    transition: 0.3s ease;
+}
+
+section h2:hover {
+    letter-spacing: 1px;
+}
+
+.section-description {
+    text-align: center;
+    color: #64748b;
+    margin-top: -20px;
+    margin-bottom: 35px;
+}
+
+
+/* ================= NAVIGATION BAR ================= */
+
+header {
+    width: 100%;
+    background: #102A56;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(16, 42, 86, 0.15);
+}
+
+nav {
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.logo span {
+    color: #93C5FD;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #93C5FD;
+    bottom: -6px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #93C5FD;
+}
+
+
+/* ================= HOME SECTION ================= */
+
+#home {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #102A56, #1D4ED8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.welcome {
+    color: #BFDBFE;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 10px;
+}
+
+#home h1 span {
+    color: #93C5FD;
+}
+
+#home h2 {
+    font-size: clamp(18px, 3vw, 25px);
+    color: #DBEAFE;
+    margin-bottom: 20px;
+}
+
+#home > p:not(.welcome) {
+    max-width: 600px;
+    color: #E2E8F0;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #102A56;
+    text-decoration: none;
+    padding: 13px 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #DBEAFE;
+    color: #102A56;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #102A56;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.social-links a {
+    color: #DBEAFE;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+#about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    line-height: 2;
+    color: #475569;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* ================= SKILLS SECTION ================= */
+
+#skills {
+    background: #F5F9FF;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid #DBEAFE;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #102A56;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background: #2563EB;
+    color: white;
+    border-color: #2563EB;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+
+/* ================= PROJECTS SECTION ================= */
+
+#projects {
+    background: white;
+}
+
+.project-intro {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #DBEAFE;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #2563EB;
+    top: 0;
+    left: -100%;
+    transition: 0.4s ease;
+}
+
+.project-card:hover::before {
+    left: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.13);
+    border-color: #2563EB;
+}
+
+.project-number {
+    font-size: 11px;
+    color: #2563EB;
+    letter-spacing: 1px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin: 15px 0;
+    color: #102A56;
+}
+
+.project-card p {
+    color: #64748b;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    display: inline-block;
+    background: #2563EB;
+    color: white;
+    text-decoration: none;
+    padding: 11px 17px;
+    border: 1px solid #2563EB;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: white;
+    color: #2563EB;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ================= EDUCATION SECTION ================= */
+
+#education {
+    background: #F5F9FF;
+}
+
+.education-card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px 30px;
+    background: white;
+    border-left: 4px solid #2563EB;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.education-card span {
+    display: inline-block;
+    color: #2563EB;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.education-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+    color: #102A56;
+}
+
+.education-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.certification-heading {
+    margin-top: 65px;
+}
+
+
+/* ================= CAREER OBJECTIVE SECTION ================= */
+
+#experience {
+    background: white;
+}
+
+.experience-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid #DBEAFE;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    background: #102A56;
+    color: white;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(16, 42, 86, 0.18);
+}
+
+.experience-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #102A56;
+}
+
+.experience-card:hover h3 {
+    color: white;
+}
+
+.experience-card p {
+    color: #64748b;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+.experience-card:hover p {
+    color: #DBEAFE;
+}
+
+.experience-card span {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2563EB;
+}
+
+.experience-card:hover span {
+    color: #93C5FD;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+#contact {
+    background: #F5F9FF;
+}
+
+.contact-intro {
+    color: #64748b;
+    max-width: 600px;
+    line-height: 1.8;
+    margin: -15px auto 35px;
+    text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid #DBEAFE;
+    padding: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: #102A56;
+    color: white;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(16, 42, 86, 0.18);
+}
+
+.contact-card h3 {
+    font-size: 19px;
+    color: #102A56;
+}
+
+.contact-card:hover h3 {
+    color: white;
+}
+
+.contact-card p {
+    font-size: 13px;
+    margin: 12px 0 20px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.contact-card:hover p {
+    color: #DBEAFE;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 9px 17px;
+    background: #2563EB;
+    color: white;
+    border: 1px solid #2563EB;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #2563EB;
+}
+
+.contact-card:hover .contact-btn {
+    background: white;
+    color: #102A56;
+    border-color: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #102A56;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h3 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #BFDBFE;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 6%;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    #home {
+        min-height: 80vh;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .social-links {
+        gap: 18px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .experience-card {
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
